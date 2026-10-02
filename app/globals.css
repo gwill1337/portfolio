@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono); */
+  --font-sans: var(--font-unbounded);
+  --font-heading: var(--font-syne);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+    --color-background: hsl(var(--background));
+    --color-foreground: hsl(var(--foreground));
+    --color-second-foreground: hsl(var(--second-foreground));
+    --color-card: hsl(var(--card));
+    --color-primary: hsl(var(--primary));
+    --color-border: hsl(var(--border));
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: var(--font-unbounded), sans-serif;
+  background: transparent;
+  /* background-color: var(--color-background); */
+}
+
+html {
+  scroll-behavior: smooth;
+  position: relative;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/* html:not(.dark) {
+  background: hsl(var(--background));
+} */
+
+html {
+  background:
+    radial-gradient(ellipse 70% 80% at 100% 100%, #F7C9D9 0%, transparent 70%),
+    radial-gradient(ellipse 60% 60% at 0% 40%, #B69FC5 0%, transparent 70%),
+    #c9a9dc;
+  background-attachment: fixed;
+}
+html.dark {
+  background:
+    radial-gradient(ellipse 75% 100% at 100% 70%, #1c0545 0%, #0a0120 40%, transparent 80%),
+    #000000;
+  background-attachment: fixed;
+}
+
+/* Слой контрастной зернистости */
+
+
+@keyframes bg-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.bg-fade-in {
+  animation: bg-fade-in 5s ease-out both;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --second-foreground: 220 10% 46%;
+
+  --card: 0 0% 100%;
+
+  /* --primary: 250 65% 55%; */
+  --primary: 264 75% 56%;
+  --primary-foreground: 210 40% 98%;
+
+  --border: 214 32% 91%;
+}
+
+.dark {
+  --background: 222 47% 4%;
+  --foreground: 213 31% 91%;
+  --second-foreground: 220 10% 46%;
+
+  --card: 222 47% 8%;
+
+  /* --primary: 250 65% 65%; */
+  /* 264 99% 56%; */
+  --primary: 264 75% 56%;
+  --primary-foreground: 213 31% 91%;
+
+  --border: 217 33% 20%;
+}
+
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    opacity: 0;
+    animation: fade-in-up 0.6s ease-out forwards;
 }
