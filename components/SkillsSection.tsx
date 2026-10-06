@@ -37,7 +37,7 @@ const skills: ISkillCart[] = [
     { name: "CI/CD", type: ["tools"], color: "#2da44e" },
     { name: "Terraform", type: ["infrastructure"], color: "#844fba" },
     { name: "Kubernetes", type: ["infrastructure"], color: "#326ce5" },
-    { name: "Figma", type: ["tools"], color: "#f24e1e" },
+    // { name: "Figma", type: ["tools"], color: "#f24e1e" },
     { name: "Vercel", type: ["tools"], color: "#111111" },
     { name: "Render", type: ["infrastructure"], color: "#46e3b7" },
     // { name: "VS code", type: ["tools"], color: "#007acc" },

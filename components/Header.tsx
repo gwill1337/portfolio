@@ -29,6 +29,33 @@ export function Header() {
         return () => window.removeEventListener("keydown", onKey);
     }, []);
 
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (href.startsWith("#")) {
+            e.preventDefault();
+            const targetId = href.replace("#", "");
+            const element = document.getElementById(targetId);
+
+            if (element) {
+                const isMobile = window.innerWidth < 768;
+                const isTall = element.clientHeight > window.innerHeight * 0.8;
+
+                if (isMobile || isTall) {
+                    element.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    });
+                } else {
+                    element.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                    });
+                }
+
+                window.history.pushState(null, "", href)
+            }
+        }
+    };
+
     return (
         <header className="py-1 sticky top-0 z-50 w-full bg-background/40 backdrop-blur-md shadow-md">
             <div className="flex items-center py-1">
@@ -41,6 +68,7 @@ export function Header() {
                             <a
                                 key={link.href}
                                 href={link.href}
+                                onClick={(e) => handleScroll(e, link.href)}
                                 className="px-3 py-1.5 rounded text-sm font-medium text-foreground hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition"
                             >
                                 {link.label}
@@ -83,7 +111,10 @@ export function Header() {
                                 <a
                                     key={link.href}
                                     href={link.href}
-                                    onClick={() => setOpen(false)}
+                                    onClick={(e) => {
+                                        setOpen(false);
+                                        handleScroll(e, link.href);
+                                    }}
                                     className="w-full px-3 py-1.5 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition"
                                 >
                                     {link.label}

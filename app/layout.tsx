@@ -27,8 +27,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gwill1337 — Software, Backend & Fullstack Developer",
-  description: "Portfolio of Gwill1337: backend and fullstack developer with networking background. Creator of Severus (P2P encrypted messenger) and MONA (self-hosted monitoring with ML).",
+  title: "Gwill1337 — Backend & Fullstack Developer",
+  description: "Portfolio of Gwill1337: backend and fullstack developer. Creator of Severus (P2P encrypted messenger) and MONA (self-hosted monitoring with ML).",
   metadataBase: new URL("https://gwill1337.vercel.app"),
   openGraph: {
     title: "Gwill1337 — Portfolio",
@@ -62,7 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Gwill1337",
-              jobTitle: "Software, Backend & Fullstack Developer",
+              jobTitle: "Backend & Fullstack Developer",
               url: "https://gwill1337.vercel.app",
               sameAs: ["https://github.com/gwill1337"],
             }),
