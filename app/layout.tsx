@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://gwill1337.vercel.app"),
 
   verification: {
-    google: "yWfmJFF-8Q8Id4lXF"
+    google: "yWfmJFF-8Q8Id4lXFXfH2d_vEMZ10owh7bYGAeQdimk"
   },
   
   openGraph: {
