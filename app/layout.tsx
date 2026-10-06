@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   title: "Gwill1337 — Backend & Fullstack Developer",
   description: "Portfolio of Gwill1337: backend and fullstack developer. Creator of Severus (P2P encrypted messenger) and MONA (self-hosted monitoring with ML).",
   metadataBase: new URL("https://gwill1337.vercel.app"),
+
+  verification: {
+    google: "google736b5296d3b8a6f2"
+  },
+  
   openGraph: {
     title: "Gwill1337 — Portfolio",
     description: "Backend & Fullstack developer. Rust, Python, FastAPI.",
