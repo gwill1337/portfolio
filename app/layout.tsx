@@ -31,10 +31,14 @@ export const metadata: Metadata = {
   description: "Portfolio of Gwill1337: backend and fullstack developer. Creator of Severus (P2P encrypted messenger) and MONA (self-hosted monitoring with ML).",
   metadataBase: new URL("https://gwill1337.vercel.app"),
 
+  alternates: {
+    canonical: "/",
+  },
+
   verification: {
     google: "yWfmJFF-8Q8Id4lXFXfH2d_vEMZ10owh7bYGAeQdimk"
   },
-  
+
   openGraph: {
     title: "Gwill1337 — Portfolio",
     description: "Backend & Fullstack developer. Rust, Python, FastAPI.",
@@ -76,7 +80,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body>
         <Providers>
-          <Background/>
+          <Background />
           <Header />
           {children}
           <Footer />
