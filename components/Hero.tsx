@@ -14,7 +14,7 @@ export function Hero() {
                     className="font-semibold text-foreground text-xl sm:text-2xl pt-2 max-w-3xl w-full text-center animate-fade-in"
                     style={{ animationDelay: "0.4s"}}
                 >
-                    Backend & Fullstack developer. </h2>
+                    Backend & Frontend developer. </h2>
                 <p className="font-medium text-center text-xs sm:text-sm w-10/12 sm:w-3/4 animate-fade-in"
                 style={{ animationDelay: "0.5s"}}
                 >

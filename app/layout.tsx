@@ -27,8 +27,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gwill1337 — Backend & Fullstack Developer",
-  description: "Portfolio of Gwill1337: backend and fullstack developer. Creator of Severus (P2P encrypted messenger) and MONA (self-hosted monitoring with ML).",
+  title: "Gwill1337 — Backend & Frontend Developer",
+  description: "Portfolio of Gwill1337: backend and frontend developer. Creator of Severus (P2P encrypted messenger) and MONA (self-hosted monitoring with ML).",
   metadataBase: new URL("https://gwill1337.vercel.app"),
 
   alternates: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Gwill1337 — Portfolio",
-    description: "Backend & Fullstack developer. Rust, Python, FastAPI.",
+    description: "Backend & Frontend developer. Rust, Python, FastAPI, Next.js.",
     url: "https://gwill1337.vercel.app",
     siteName: "Gwill1337 Portfolio",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -51,10 +51,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gwill1337 — Portfolio",
-    description: "Backend & Fullstack developer.",
+    description: "Backend & Frontend developer.",
     images: ["/og-image.png"],
   },
 };
+
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -71,7 +72,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Gwill1337",
-              jobTitle: "Backend & Fullstack Developer",
+              jobTitle: "Backend & Frontend Developer",
               url: "https://gwill1337.vercel.app",
               sameAs: ["https://github.com/gwill1337"],
             }),

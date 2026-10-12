@@ -9,6 +9,7 @@ const projects: IProject[] = [
         image: "/projects/Severus_host.gif",
         stack: ["Rust", "Tokio", "axum", "iroh", "E2EE", "Tauri"],
         link: "https://github.com/gwill1337/Severus",
+        demo: "https://severus-gwill1337.vercel.app/",
     },
     {
         name: "MONA",
