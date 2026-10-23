@@ -33,7 +33,7 @@ export function Header() {
     return (
         <header className="py-1 sticky top-0 z-50 w-full bg-background/40 backdrop-blur-md shadow-md">
             <div className="flex items-center py-1">
-                <a className="font-archivo font-semibold dark:text-white  text-black text-xl sm:text-3xl px-2 ml-3 cursor-pointer tracking-tight"
+                <a className="font-heading font-semibold dark:text-white  text-black text-xl sm:text-3xl px-2 ml-3 cursor-pointer tracking-tight"
                 onClick={(e) => handleScroll(e, "#hero")}>
                     Elisey Ar <span className="text-primary font-instrument tracking-wider"> Portfolio </span>
                 </a>

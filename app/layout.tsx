@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Archivo, Instrument_Serif, Inter } from "next/font/google";
+import { Archivo, Instrument_Serif, Inter, Syne } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Providers } from "./providers";
 import { Background } from "@/components/Background";
 
-const archivo = Archivo({
+const syne = Syne({
   subsets: ["latin"],
-  axes: ["wdth"],
-  variable: "--font-archivo",
+  variable: "--font-syne",
 });
 
 const instrument_serif = Instrument_Serif({
@@ -60,7 +59,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${instrument_serif.variable} ${inter.variable} h-full antialiased`}
+      className={`${inter.variable} ${syne.variable} ${instrument_serif.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
