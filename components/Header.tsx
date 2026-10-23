@@ -44,7 +44,7 @@ export function Header() {
                                 key={link.href}
                                 href={link.href}
                                 onClick={(e) => handleScroll(e, link.href)}
-                                className="px-3 py-1.5 rounded text-sm font-semibold text-foreground hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition"
+                                className="px-3 py-1.5 rounded text-base font-semibold text-foreground hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition"
                             >
                                 {link.label}
                             </a>
@@ -90,7 +90,7 @@ export function Header() {
                                         setOpen(false);
                                         handleScroll(e, link.href);
                                     }}
-                                    className="w-full px-3 py-1.5 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition"
+                                    className="w-full px-3 py-1.5 rounded-lg text-base font-medium text-foreground hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition"
                                 >
                                     {link.label}
                                 </a>
@@ -103,7 +103,7 @@ export function Header() {
                             onClick={() => setOpen(false)}
                             className="flex items-center gap-3 px-3 py-1.5 rounded-lg text-foreground hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition"
                         >
-                            <span className="text-sm font-medium">GitHub</span>
+                            <span className="text-base font-medium">GitHub</span>
                             <SiGithub size={20} />
                         </a>
                     </nav>

@@ -10,7 +10,7 @@ export function Footer() {
                     </a>
                 </div>
                 <p className="flex items-center gap-1.5 text-second-foreground text-sm">
-                    All rights reserved © {new Date().getFullYear()} Gwill1337
+                    All rights reserved © {new Date().getFullYear()} Elisey Ar
                 </p>
             </div>
         </footer>
