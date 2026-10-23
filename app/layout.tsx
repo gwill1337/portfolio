@@ -72,7 +72,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               name: "Elisey ar",
               jobTitle: "Backend & Frontend Developer",
               url: "https://eliseyar.vercel.app",
-              sameAs: ["https://github.com/gwill1337"],
+              sameAs: ["https://github.com/gwill1337", "https://x.com/elisey_ar"],
             }),
           }}
         />
