@@ -35,7 +35,7 @@ export function ProjectsSection() {
     return (
         <div className="w-full flex flex-col items-center">
             <div className="w-full max-w-6xl items-center gap-5">
-                <h2 className="self-start text-2xl sm:text-4xl font-semibold text-left mb-5 pl-2 ">
+                <h2 className="self-start text-3xl sm:text-[40px] font-semibold text-left mb-5 pl-2 ">
                     Projects
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mx-7">

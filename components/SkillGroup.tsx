@@ -134,7 +134,7 @@ export function SkillGroup({
                             window.dispatchEvent(new Event('resize'));
                             setIsTitleReady(true);
                         }}
-                        className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight"
+                        className="text-3xl sm:text-4xl md:text-[40px] font-extrabold text-foreground tracking-tight"
                     >
                         {title}
                     </motion.h2>

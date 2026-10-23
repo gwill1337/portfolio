@@ -3,14 +3,15 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "../hooks/useTheme"
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { useEffect, useState } from "react";
+import { handleScroll } from "@/utils/handleScroll";
 
 const btn = "px-3 py-1 hover:bg-black/15 dark:hover:bg-white/15 transition rounded border border-black/20 dark:border-white/20 cursor-pointer h-9 flex items-center";
 
 const navLinks = [
-    { label: "Skills", href: "#skills" },
+    // { label: "Skills", href: "#skills" },
     { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
+    { label: "Projects", href: "#projects" },
 ];
 
 export function Header() {
@@ -29,39 +30,13 @@ export function Header() {
         return () => window.removeEventListener("keydown", onKey);
     }, []);
 
-    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        if (href.startsWith("#")) {
-            e.preventDefault();
-            const targetId = href.replace("#", "");
-            const element = document.getElementById(targetId);
-
-            if (element) {
-                const isMobile = window.innerWidth < 768;
-                const isTall = element.clientHeight > window.innerHeight * 0.8;
-
-                if (isMobile || isTall) {
-                    element.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                } else {
-                    element.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                    });
-                }
-
-                window.history.pushState(null, "", href)
-            }
-        }
-    };
-
     return (
         <header className="py-1 sticky top-0 z-50 w-full bg-background/40 backdrop-blur-md shadow-md">
             <div className="flex items-center py-1">
-                <h1 className="font-heading font-semibold dark:text-white  text-black text-xl sm:text-3xl px-2">
-                    Gwill1337 <span className="text-primary"> Portfolio </span>
-                </h1>
+                <a className="font-archivo font-semibold dark:text-white  text-black text-xl sm:text-3xl px-2 ml-3 cursor-pointer tracking-tight"
+                onClick={(e) => handleScroll(e, "#hero")}>
+                    Elisey Ar <span className="text-primary font-instrument tracking-wider"> Portfolio </span>
+                </a>
                 <div className="absolute right-3 flex items-center gap-2">
                     <nav className="hidden md:flex items-center gap-1 ml-8">
                         {navLinks.map((link) => (
@@ -69,7 +44,7 @@ export function Header() {
                                 key={link.href}
                                 href={link.href}
                                 onClick={(e) => handleScroll(e, link.href)}
-                                className="px-3 py-1.5 rounded text-sm font-medium text-foreground hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition"
+                                className="px-3 py-1.5 rounded text-sm font-semibold text-foreground hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition"
                             >
                                 {link.label}
                             </a>

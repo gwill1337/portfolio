@@ -1,35 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Syne, Unbounded } from "next/font/google";
+import { Archivo, Instrument_Serif, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Providers } from "./providers";
 import { Background } from "@/components/Background";
 
-const syne = Syne({
-  variable: "--font-syne",
+const archivo = Archivo({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  variable: "--font-archivo",
+});
+
+const instrument_serif = Instrument_Serif({
+  weight: "400",
+  style: "italic",
+  variable: "--font-instrument_serif",
   subsets: ["latin"],
 });
 
-const unbounded = Unbounded({
-  variable: "--font-unbounded",
-  subsets: ["latin"],
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  weight: "700",
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Gwill1337 — Backend & Frontend Developer",
-  description: "Portfolio of Gwill1337: backend and frontend developer. Creator of Severus (P2P encrypted messenger) and MONA (self-hosted monitoring with ML).",
-  metadataBase: new URL("https://gwill1337.vercel.app"),
+  title: "Elisey ar — Backend & Frontend Developer",
+  description: "Portfolio of Elisey ar: backend and frontend developer. Creator of Severus (P2P encrypted messenger) and MONA (self-hosted monitoring with ML).",
+  metadataBase: new URL("https://eliseyar.vercel.app"),
 
   alternates: {
     canonical: "/",
@@ -40,17 +39,17 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Gwill1337 — Portfolio",
+    title: "Elisey ar — Portfolio",
     description: "Backend & Frontend developer. Rust, Python, FastAPI, Next.js.",
     url: "https://gwill1337.vercel.app",
-    siteName: "Gwill1337 Portfolio",
+    siteName: "Elisey ar Portfolio",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gwill1337 — Portfolio",
+    title: "Elisey ar — Portfolio",
     description: "Backend & Frontend developer.",
     images: ["/og-image.png"],
   },
@@ -61,7 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${unbounded.variable} h-full antialiased`}
+      className={`${archivo.variable} ${instrument_serif.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
@@ -71,9 +70,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Gwill1337",
+              name: "Elisey ar",
               jobTitle: "Backend & Frontend Developer",
-              url: "https://gwill1337.vercel.app",
+              url: "https://eliseyar.vercel.app",
               sameAs: ["https://github.com/gwill1337"],
             }),
           }}

@@ -9,22 +9,24 @@ export default function Page() {
     return (
 
         <div>
-            <div className="flex justify-center max-w-4xl mx-auto mt-35">
-                <Hero />
-            </div>
-            <div className="mt-35">
-                <section id="skills" className="scroll-mt-20">
-                    <SkillsSection />
+            <div className="flex justify-center max-w-4xl mx-auto mt-25">
+                <section id="hero" className="scroll-mt-40">
+                    <Hero />
                 </section>
             </div>
-            <div className="mt-35">
-                <section id="about" className="scroll-mt-20">
-                    <Reveal> <About /> </Reveal>
+            <div className="mt-15">
+                <section id="skills" className="scroll-mt-20">
+                    <SkillsSection />
                 </section>
             </div>
             <div className="mt-35 mb-35 ">
                 <section id="projects" className="scroll-mt-20">
                     <Reveal> <ProjectsSection /> </Reveal>
+                </section>
+            </div>
+            <div className="mt-35">
+                <section id="about" className="scroll-mt-20">
+                    <Reveal> <About /> </Reveal>
                 </section>
             </div>
             <div className="mt-35 mb-45">

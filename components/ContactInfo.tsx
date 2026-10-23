@@ -1,6 +1,5 @@
 "use client"
 import { SiX } from "@icons-pack/react-simple-icons";
-import { LocationEdit, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -32,30 +31,32 @@ export function ContactInfo() {
 
     return (
         <div className="flex flex-col w-full not-first:items-center max-w-6xl mx-auto">
-            <h2 className="self-start text-2xl sm:text-4xl font-semibold text-left mb-8 pl-2">
+            <h2 className="self-start text-3xl sm:text-[40px] font-semibold text-left mb-2.5 md:mb-8 pl-2">
                 Contact
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-2 md:mx-auto">
                 <div className="rounded bg-card/80 pt-2 pb-4 sm:py-2 px-5 flex flex-col justify-start text-foreground">
-                    <h3>
+                    <h3 className="text-lg md:text-xl">
                         Got a project in mind?
                     </h3>
-                    <div className="flex flex-col mt-3 pt-2 h-full">
-                        <div className="flex flex-col flex-1 text-center">
+                    <div className="flex flex-col pt-1 md:mt-3 md:pt-2 h-full">
+                        <div className="flex flex-col flex-1 text-center text-sm md:text-base">
                             <p>If you have a project idea, feel free to send me a message. I'm always open to new opportunities, collaborations, and fresh ideas.</p>
                         </div>
                         <div className="pl-1 pr-3 w-4.5 shrink-0" aria-hidden />
-                        <div className="flex flex-col justify-start">
-                            <h3> Social Media </h3>
-                            <div className="flex rounded px-2 py-2.5 justify-center">
-                                <a
-                                    href="https://x.com/gwill1337"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hover:text-primary transition-colors duration-300"
-                                >
-                                    <SiX size={20} />
-                                </a>
+                        <div className="flex flex-col justify-start mt-5 md:mt-0">
+                            <h3 className="text-base"> Social Media </h3>
+                            <div className="border-t border-border">
+                                <div className="flex rounded px-2 py-2.5 justify-center">
+                                    <a
+                                        href="https://x.com/gwill1337"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-primary transition-colors duration-300"
+                                    >
+                                        <SiX size={20} />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -110,7 +111,7 @@ export function ContactInfo() {
                     <button
                         type="submit"
                         disabled={status === "sending"}
-                        className="w-full py-2 rounded border border-border bg-primary disabled:opacity-60 transition cursor-pointer"
+                        className="w-full py-2 rounded border border-border bg-primary disabled:opacity-60 transition cursor-pointer hover:brightness-110 active:scale-[0.98]"
                     >
                         {status === "sending" ? "Sending..." : "Send Message"}
                     </button>
